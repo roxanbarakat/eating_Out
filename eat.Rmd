@@ -1,6 +1,6 @@
 ---
 title: "Eating Out"
-author: "your name here"
+author: "Roxan Barakat"
 output: 
   html_document:
     number_sections: true
@@ -28,15 +28,19 @@ require(tigerstats)
 require(knitr)
 require(foreign)
 ```
-```{r, eval=FALSE}
-GSS <-read.dta(file="GSSxxxx.dta")
+```{r, eval=TRUE}
+GSS <-read.dta(file="GSS1998.dta")
 GSS <- droplevels(GSS)
 mydata <- select(GSS,race,age,eatout)
 mydata <- na.omit(mydata)
 ```
 
 
+```{r}
+barchartGC(~race + eatout,data=mydata)
+barchartGC(~race + eatout,data=mydata, type="percent")
 
+```
 
 
 
