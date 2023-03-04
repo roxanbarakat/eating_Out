@@ -44,5 +44,10 @@ barchartGC(~race + eatout,data=mydata, type="percent")
 
 The plot shows that white people say yes to eating out more often than black or other people do. This type of graph is known as a bar graph used to compare values between different groups over time
 
+```{r}
+table1 <- xtabs(~race + eatout, data=mydata)
+rowPerc(table1)
+colPerc(table1)
+```
 
-
+The numerical results show that white people say yes to eating out 83.11% of the time. While black people ate out 69.94% of the time, and the other ate out 72.12% of the time. Therefore, from the given percentages, we infer that white people eat out more.
