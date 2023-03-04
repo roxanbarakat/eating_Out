@@ -51,3 +51,9 @@ colPerc(table1)
 ```
 
 The numerical results show that white people say yes to eating out 83.11% of the time. While black people ate out 69.94% of the time, and the other ate out 72.12% of the time. Therefore, from the given percentages, we infer that white people eat out more.
+
+```{r}
+fisherXY(mydata$race, mydata$eatout, printAll = TRUE)
+```
+
+
